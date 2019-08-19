@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <control namespace="AB" constructor="CompositeAddress" version="0.0.21" display-name-key="Composite Address Control" description-key="Use this control to minimize the size of address section on the form and format it the way you want" control-type="standard">
+    <property name="value" display-name-key="Full Address" description-key="Full Address" of-type="SingleLine.Text" usage="bound" required="true" />
+    <property name="format" display-name-key="Address Formatting" description-key="Provide pattern to format Full Address" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="street1" display-name-key="Street 1" description-key="Street 1" of-type="SingleLine.Text" usage="bound" required="true" />
+    <property name="street2" display-name-key="Street 2" description-key="Street 2" of-type="SingleLine.Text" usage="bound" required="false" />
+    <property name="street2visible" usage="input" of-type="Enum" display-name-key="Street 2 is Visible" description-key="Select if Street 2 field is visible" required="true">
+      <value name="yes" display-name-key="Yes" description-key="Yes, Street 2 is visible" default="true">yes</value>
+      <value name="no" display-name-key="No" description-key="No, Street 2 is not visible">no</value>
+    </property>
+    <property name="street3" display-name-key="Street 3" description-key="Street 3" of-type="SingleLine.Text" usage="bound" required="false" />
+    <property name="street3visible" usage="input" of-type="Enum" display-name-key="Street 3 is Visible" description-key="Select if Street 3 field is visible" required="true">
+      <value name="yes" display-name-key="Yes" description-key="Yes, Street 3 is visible" default="true">yes</value>
+      <value name="no" display-name-key="No" description-key="No, Street 3 is not visible">no</value>
+    </property>
+    <property name="city" display-name-key="City" description-key="City" of-type="SingleLine.Text" usage="bound" required="true" />
+    <property name="county" display-name-key="County" description-key="County" of-type="SingleLine.Text" usage="bound" required="false" />
+    <property name="countyvisible" usage="input" of-type="Enum" display-name-key="County is Visible" description-key="Select if County field is visible" required="true">
+      <value name="yes" display-name-key="Yes" description-key="Yes, County is visible" default="true">yes</value>
+      <value name="no" display-name-key="No" description-key="No, County is not visible">no</value>
+    </property>
+    <type-group name="StringOrOptionset">
+      <type>SingleLine.Text</type>
+      <type>OptionSet</type>
+    </type-group>
+    <property name="state" display-name-key="State/Province" description-key="State/Province" of-type-group="StringOrOptionset" usage="bound" required="false" />
+    <property name="statevisible" usage="input" of-type="Enum" display-name-key="State/Province is Visible" description-key="Select if State/Province field is visible" required="true">
+      <value name="yes" display-name-key="Yes" description-key="Yes, State/Province is visible" default="true">yes</value>
+      <value name="no" display-name-key="No" description-key="No, State/Province is not visible">no</value>
+    </property>
+    <property name="zipcode" display-name-key="Zip Code" description-key="Zip Code" of-type="SingleLine.Text" usage="bound" required="true" />
+    <property name="country" display-name-key="Country" description-key="Country" of-type-group="StringOrOptionset" usage="bound" required="false" />
+    <property name="countryvisible" usage="input" of-type="Enum" display-name-key="Country is Visible" description-key="Select if Country field is visible" required="true">
+      <value name="yes" display-name-key="Yes" description-key="Yes, Country is visible" default="true">yes</value>
+      <value name="no" display-name-key="No" description-key="No, Country is not visible">no</value>
+    </property>
+    <resources>
+      <code path="index.ts" order="1"/>
+      <css path="../node_modules/bootstrap/dist/css/bootstrap.min.css" order="1" />
+      <css path="css/CompositeAddress.css" order="2" />
+    </resources>
+  </control>
+</manifest>

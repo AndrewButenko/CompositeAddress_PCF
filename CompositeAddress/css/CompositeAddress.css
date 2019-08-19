@@ -1,0 +1,40 @@
+.compositeAddress {
+    background: transparent;
+    border-style: none;
+    color: #000000;
+    font-size: 1.0rem;
+    font-weight: 600;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    width: 98%;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    outline: 0 !important;
+}
+
+.compositeAddressFocused {
+    background: transparent;
+    border-width: 1px;
+    border-color: #000000;
+    color: #000000;
+    font-size: 1.0rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    width: 98%;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    outline: 0 !important;
+}
+
+.d365StyleInput {
+    background: transparent;
+    border-width: 1px;
+    border-color: #000000;
+    color: #000000;
+    font-size: 1.0rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    outline: 0 !important;
+}
